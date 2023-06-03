@@ -1,0 +1,51 @@
+local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local window = kavoUi.CreateLib("Fart in a Box💩","BloodTheme")
+
+---Tabs
+ 
+local Tab1 = window:NewTab("Main")
+local Tab1Section = Tab1:NewSection("Free Roblox Scripts")
+local Tab2 = window:NewTab("Sup")
+local Tab2Section = Tab2:NewSection("Sup is word")
+local Tab1Section = Tab1:NewSection("Made By biel17125")
+local Tab1Section = Tab1:NewSection("freerobloxscripts.com")
+ 
+---Buttons
+
+Tab1Section:NewToggle("Auto Poop", "Poop automatically without clicking on the screen", function(state)
+    if state then
+_G.autopoop = true
+while _G.autopoop == true do
+local args = {[1] = "Poop",
+    [2] = "Spawn",
+    [3] = "Poop"}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(0)
+end
+     else
+_G.autopoop = false
+end
+end)
+
+Tab1Section:NewToggle("Auto Coin (OP)", "Finish the obby automatically", function(state)
+    if state then
+_G.autofinish = true
+while _G.autofinish == true do
+wait(0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(125, 46, 129)
+
+wait(0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(132, 56, 232)
+end
+    else
+_G.autofinish = false
+end
+end)
+
+Tab1Section:NewButton("TP Rebirth","Teleports you to the rebirth location",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(21, 4, -35)
+end)
+
+Tab2Section:NewButton("Keyboard","Pc Like Keyboard",function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/manimcool21/Keyboard-FE/main/Protected%20(3).lua'),true))()
+end)
